@@ -10,32 +10,29 @@
 - 反面偏复古明信片排版，包含诗句、邮票、地址线和印章
 - 绘图目标模型为 GPT Image 2
 
-## 推荐安装方式
+## 安装链接
 
-这个仓库已经调整为“仓库根目录就是 skill”，根目录直接包含：
-
-```text
-SKILL.md
-agents/
-assets/
-references/
-```
-
-如果你的平台支持通过 GitHub 仓库链接安装根目录 skill，直接使用这个链接即可：
+真正的 skill 位于仓库中的这个目录：
 
 ```text
-https://github.com/dorlarosendo434-hub/create-ip-travel-postcards
+skills/create-ip-travel-postcards/
 ```
+
+如果你的平台支持“从 GitHub 链接安装 skill”，请使用这个链接：
+
+```text
+https://github.com/dorlarosendo434-hub/create-ip-travel-postcards/tree/main/skills/create-ip-travel-postcards
+```
+
+这个链接已经指向具体 skill 目录，安装器可以从链接中解析路径。
 
 ## Codex 脚本安装
 
-Codex 当前的官方安装脚本仍然需要显式指定路径。因为本仓库根目录就是 skill，所以路径使用 `.`，并用 `--name` 指定安装后的 skill 名称：
+在 Codex 中，可以用官方安装脚本直接安装上面的 GitHub 链接：
 
 ```powershell
 python -X utf8 "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" `
-  --repo dorlarosendo434-hub/create-ip-travel-postcards `
-  --path . `
-  --name create-ip-travel-postcards
+  --url "https://github.com/dorlarosendo434-hub/create-ip-travel-postcards/tree/main/skills/create-ip-travel-postcards"
 ```
 
 安装完成后，重启 Codex 让新 skill 生效。
@@ -71,5 +68,5 @@ python -X utf8 "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\i
 dist/create-ip-travel-postcards.zip
 ```
 
-日常通过 GitHub 安装时不需要使用这个 ZIP。
+日常通过 GitHub 链接安装时不需要使用这个 ZIP。
 
