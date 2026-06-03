@@ -1,0 +1,4 @@
+interface:
+  display_name: "IP 文旅明信片"
+  short_description: "生成统一系列的 IP 景点正反面文旅明信片插画与互动叙事"
+  default_prompt: "Use $create-ip-travel-postcards to generate a front-and-back travel postcard sample for my IP character and destination."
